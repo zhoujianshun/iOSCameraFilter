@@ -1,0 +1,27 @@
+//
+//  EPPCameraBottomView.h
+//  Filter
+//
+//  Created by 周建顺 on 2021/4/22.
+//  Copyright © 2021 Hsusue. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+@class EPPCameraBottomView;
+
+@protocol EPPCameraBottomViewDelegate <NSObject>
+
+-(void)cameraBottomViewCameraTapped:(EPPCameraBottomView*)view;
+-(void)cameraBottomViewFilterTapped:(EPPCameraBottomView*)view;
+
+@end
+
+@interface EPPCameraBottomView : UIView
+
+@property (nonatomic, weak) id<EPPCameraBottomViewDelegate>  delegate;
+
+@end
+
+NS_ASSUME_NONNULL_END
